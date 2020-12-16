@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<link rel="stylesheet" type="text/css" href="final.css">
+<body>
+	<!-- 所有内容的大盒子 -->
+	<div class="all">
+	<!-- 头部  -->
+	<div class="head ">
+		<p> 天潇</p>
+		<ul class="nav">
+			<li><a href="#">商品分类</a></li>
+			<li><a href="#">折扣快抢</a></li>
+			<li><a href="#">会员俱乐部</a></li>
+		</ul>
+		<form class="form ">
+                    <input type="text" placeholder="输入关键字" class="search" />
+                    <input type="button" class="submit" />
+                </form>
+        <a class="person">个人中心</a>
+        <div class="clear"></div>
+	</div>
+	
+	<!-- 头部结束 --> 
+
+	<!-- 轮播图 -->
+	<div class="banner">
+	<img id="lunbo" src="./myimg/1.png">
+	</div>
+	<!-- 轮播图结束 -->
+	<p id="aleardy">您已经浏览此页面0秒种，心动不如行动，赶快下单吧^-^</p>
+
+	<!-- 每日必看专区开始 -->
+	<div class="everyday ">
+		<p>每日必看专区</p>
+	
+	 <div class="des">
+		<img src="myimg/shop1.png">
+		<p><span style="color:black">疯抢价</span>￥430</p>
+	 </div>
+	 <div class="des">
+		<img src="myimg/shop2.png">
+		<p><span style="color:black">疯抢价</span>￥199</p>
+	 </div>
+	 <div class="des">
+		<img src="myimg/shop3.png">
+		<p><span style="color:black">疯抢价</span>￥53</p>
+	 </div>
+	 <div class="des">
+		<img src="myimg/shop4.png">
+		<p>连衣裙</p>
+	 </div>
+	 <div class="des">
+		<img src="myimg/shop6.png">
+		<p>女式T恤</p>
+	 </div>	
+	 <div class="clear"></div>
+	</div>
+	<!-- 每日必看专区结束 -->
+
+	<!-- 精选品牌开始 -->
+
+	<div class="brank ">
+		<p>精选品牌</p>
+		<div class="dec">
+			<img src="myimg/brank1.png">
+			<p>雪俐黛梦思/顶瓜瓜/淳度等睡衣/家居服专场</p>
+		</div>
+		<div class="dec">
+			<img src="myimg/brank2.png">
+			<p>亿嘉/隽美/songfa等餐厨用具专场</p>
+		</div>
+		<div class="dec">
+			<img src="myimg/brank3.png">
+			<p>PARZINMTMIT/VOMDIR等太阳镜专场</p>
+		</div>
+		<div class="dec">
+			<img src="myimg/brank4.png">
+			<p>奇美拉/CAROMAY/Agovski等饰品专场</p>
+		</div>
+		<div class="clear"></div>
+
+	</div>
+	<!-- 精选品牌结束 -->
+
+	<!-- 女装特卖开始 -->
+	<div class="girl">
+		<p>女装特卖</p>
+		<div class="dec">
+			<img src="myimg/woman1.png">
+			<p>淑轩诗女装年中特卖专场</p>
+		</div>
+		<div class="dec">
+			<img src="myimg/woman2.png">
+			<p>缪佳牛仔女装年中特卖节3折封顶专场</p>
+		</div>
+		<div class="clear"></div>
+		
+
+	</div>
+	<!-- 女装特卖结束 -->
+
+	<!-- 男装精选开始 -->
+	<div class="boy">
+		<p>男装精选</p>
+		<div class="dec">
+			<img src="myimg/man1.png">
+			<p>鄂尔多斯ERDOS男装年中特卖节专场</p>
+		</div>
+		<div class="dec">
+			<img src="myimg/man2.png">
+			<p>劲霸K-BOXING男装年中特卖节专场</p>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!-- 男装精选结束 -->
+
+<!-- 版权开始 -->
+	<div class="ban">
+		<p>冀CP备000号、2019-2020年版权所有</p>	
+		<p id="dislike">不喜欢此此板块？点击隐藏</p>
+	</div>
+<!-- 版权结束 -->
+
+
+	</div>
+	<!-- 所有内容的大盒子 -->
+</body>
+	<script type="text/javascript">
+		var lunbo=document.getElementById("lunbo");
+		var i=0;
+		lunbo.onclick = function(){
+			i = (++i)%5;
+			lunbo.src = "./myimg/" + i + ".png";
+		}
+
+		var aleardy=document.getElementById("aleardy");
+		var timer;
+		var time=1;
+		timer = setInterval(function(){
+			aleardy.innerHTML="您已经浏览此页面"+time+"秒种，心动不如行动，赶快下单吧^-^"
+			time++;
+			if(time==200){
+				alert("注意保护眼睛哟@_@");
+			}
+		},1000)
+
+		var ban = document.getElementsByClassName("ban")[0];
+		var dislike = document.getElementById("dislike");
+		dislike.onclick=function(){
+			ban.style.display="none";
+		}
+	</script>
+</html>
